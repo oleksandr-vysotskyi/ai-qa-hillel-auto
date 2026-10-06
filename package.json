@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "preflight": "node scripts/preflight.mjs",
+    "jira": "node scripts/jira-request.mjs",
     "test": "playwright test",
     "test:guest": "playwright test tests/guest-garage.spec.ts --project=chromium",
     "test:headed": "playwright test --headed",

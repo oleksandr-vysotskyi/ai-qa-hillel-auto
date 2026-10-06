@@ -1,4 +1,5 @@
 .env
+jira/
 .playwright/
 .playwright-cli/
 node_modules/
