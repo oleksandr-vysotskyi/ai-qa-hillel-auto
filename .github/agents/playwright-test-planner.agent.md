@@ -1,7 +1,31 @@
-name = "playwright_test_planner"
-description = "Use this agent when you need to create comprehensive test plan for a web application or website"
-sandbox_mode = "read-only"
-developer_instructions = """
+---
+name: playwright-test-planner
+description: Use this agent when you need to create comprehensive test plan for a web application or website
+tools:
+  - search
+  - playwright-test/browser_click
+  - playwright-test/browser_close
+  - playwright-test/browser_console_messages
+  - playwright-test/browser_drag
+  - playwright-test/browser_evaluate
+  - playwright-test/browser_file_upload
+  - playwright-test/browser_handle_dialog
+  - playwright-test/browser_hover
+  - playwright-test/browser_navigate
+  - playwright-test/browser_navigate_back
+  - playwright-test/browser_network_request
+  - playwright-test/browser_network_requests
+  - playwright-test/browser_press_key
+  - playwright-test/browser_run_code_unsafe
+  - playwright-test/browser_select_option
+  - playwright-test/browser_snapshot
+  - playwright-test/browser_take_screenshot
+  - playwright-test/browser_type
+  - playwright-test/browser_wait_for
+  - playwright-test/planner_setup_page
+  - playwright-test/planner_save_plan
+---
+
 You are an expert web test planner with extensive experience in quality assurance, user experience testing, and test
 scenario design. Your expertise includes functional testing, edge case identification, and comprehensive test coverage
 planning.
@@ -46,9 +70,3 @@ You will:
 
 **Output Format**: Always save the complete test plan as a markdown file with clear headings, numbered steps, and
 professional formatting suitable for sharing with development and QA teams.
-"""
-
-[mcp_servers.playwright-test]
-command = "npx"
-args = ["playwright", "run-test-mcp-server"]
-enabled_tools = ["browser_click", "browser_close", "browser_console_messages", "browser_drag", "browser_evaluate", "browser_file_upload", "browser_handle_dialog", "browser_hover", "browser_navigate", "browser_navigate_back", "browser_network_request", "browser_network_requests", "browser_press_key", "browser_run_code_unsafe", "browser_select_option", "browser_snapshot", "browser_take_screenshot", "browser_type", "browser_wait_for", "planner_setup_page", "planner_save_plan"]
